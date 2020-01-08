@@ -1,0 +1,171 @@
+<template>
+  <v-app>
+    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+      <v-list>
+        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+          <v-list-item-action>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title v-text="item.title" />
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <v-spacer />
+      <template v-slot:append>
+        <div class="pa-2">
+          <v-btn @click.stop="$vuetify.theme.dark = !$vuetify.theme.dark" block>
+            <v-icon>mdi-theme-light-dark</v-icon>&nbsp; Dark Mode On/Off
+          </v-btn>
+        </div>
+      </template>
+    </v-navigation-drawer>
+    <v-app-bar :clipped-left="clipped" fixed app>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-spacer />
+    </v-app-bar>
+    <v-content>
+      <v-container>
+        <nuxt />
+      </v-container>
+    </v-content>
+    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
+      <v-list>
+        <v-list-item @click.native="right = !right">
+          <v-list-item-action>
+            <v-icon light>mdi-repeat</v-icon>
+          </v-list-item-action>
+          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+    <v-footer padless inset absolute app>
+      <v-card flat tile class="grey darken white--text text-center" width="100vw">
+        <v-card-text>
+          <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+            <v-icon size="24px">{{ icon }}</v-icon>
+          </v-btn>
+        </v-card-text>
+        <v-row>
+          <v-spacer></v-spacer>
+          <v-col cols="auto">
+            <v-card flat class="mx-auto transparent" width="200" href="https://www.launchcode.org">
+              <v-img
+                contain
+                class="align-end"
+                height="50px"
+                src="https://www.launchcode.org/assets/dabomb-2080d6e23ef41463553f203daaa15991fd4c812676d0b098243b4941fcf4b57f.svg"
+              ></v-img>
+            </v-card>
+          </v-col>
+          <v-col cols="auto">
+            <v-card flat class="mx-auto transparent" width="200" href="https://www.p2pu.org">
+              <v-sheet class="px-2 transparent">
+                <v-img
+                  contain
+                  class="align-end"
+                  height="40px"
+                  src="https://www.p2pu.org/assets/images/p2pu-logo.png"
+                ></v-img>
+              </v-sheet>
+            </v-card>
+          </v-col>
+          <v-col cols="auto">
+            <v-card
+              flat
+              class="mx-auto transparent"
+              width="200"
+              href="https://digitalliteracyassessment.org"
+            >
+              <v-sheet class="px-4 transparent">
+                <v-img
+                  contain
+                  class="align-end"
+                  height="50px"
+                  src="https://assets.digitalliteracyassessment.org/static/main_website/img/ns-logo.png"
+                ></v-img>
+              </v-sheet>
+            </v-card>
+          </v-col>
+          <v-spacer></v-spacer>
+        </v-row>
+        <v-divider></v-divider>
+        <v-card-text class="white--text">
+          {{ new Date().getFullYear() }} &copy;
+          <strong>Tech Access</strong>
+        </v-card-text>
+      </v-card>
+    </v-footer>
+  </v-app>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      clipped: false,
+      drawer: false,
+      fixed: false,
+      initialDark: this.$vuetify ? this.$vuetify.theme.dark : false,
+      items: [
+        {
+          icon: "mdi-home",
+          title: "Home",
+          to: "/"
+        },
+        {
+          icon: "mdi-book-information-variant",
+          title: "About",
+          to: "/about"
+        },
+        {
+          icon: "mdi-calendar-heart",
+          title: "Events",
+          to: "/events"
+        },
+        {
+          icon: "mdi-thought-bubble",
+          title: "Resources",
+          to: "/resources"
+        },
+        {
+          icon: "mdi-charity",
+          title: "Volunteer",
+          to: "/volunteer"
+        },
+        {
+          icon: "mdi-hand-heart",
+          title: "Partner",
+          to: "/partner"
+        },
+        {
+          icon: "mdi-post",
+          title: "Blog",
+          to: "/blog"
+        },
+        {
+          icon: "mdi-email",
+          title: "Contact",
+          to: "/contact"
+        }
+      ],
+      icons: [
+        "mdi-facebook",
+        "mdi-twitter",
+        "mdi-google-plus",
+        "mdi-linkedin",
+        "mdi-instagram"
+      ],
+      miniVariant: false,
+      right: true,
+      rightDrawer: false,
+      title: "Tech Access"
+    };
+  },
+  beforeDestroy() {
+    if (!this.$vuetify) return;
+
+    this.$vuetify.theme.dark = this.initialDark;
+  }
+};
+</script>
