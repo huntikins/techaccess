@@ -2,21 +2,4 @@
 
 > New website for the Tech Access team ran by the Kansas City Public Library
 
-## Build Setup
-
-``` bash
-# install dependencies
-$ yarn install
-
-# serve with hot reload at localhost:3000
-$ yarn dev
-
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Website is built using NUXT.js to SSR the Vue.js app. Vuetify.js is used for component styling and Cockpit CMS is used for the back end. CMS is running in a docker container and uses a sub domain for the api to hit. i.e. google.com front end, cms.google.com backend
