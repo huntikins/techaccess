@@ -12,16 +12,18 @@
         </v-list-item>
       </v-list>
       <v-spacer />
-      <template v-slot:append>
-        <div class="pa-2">
-          <v-btn @click.stop="$vuetify.theme.dark = !$vuetify.theme.dark" block>
-            <v-icon>mdi-theme-light-dark</v-icon>&nbsp; Dark Mode On/Off
-          </v-btn>
-        </div>
-      </template>
     </v-navigation-drawer>
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-spacer />
+      <v-card class="transparent pa-4 text--center" flat ripple to="/">
+        <v-img
+          src="http://localhost:8080/storage/uploads/2020/01/08/5e163ed73da54navlogo.png"
+          contain
+          width="50%"
+          class="mx-auto"
+        />
+      </v-card>
       <v-spacer />
     </v-app-bar>
     <v-content>
@@ -29,37 +31,39 @@
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer v-model="rightDrawer" :right="right" temporary fixed>
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>mdi-repeat</v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer padless inset absolute app>
-      <v-card flat tile class="grey darken white--text text-center" width="100vw">
+    <v-footer padless inset absolute app dark="true">
+      <v-card flat tile dark="true" class="text-center" width="100vw">
         <v-card-text>
-          <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
+          <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
             <v-icon size="24px">{{ icon }}</v-icon>
           </v-btn>
         </v-card-text>
         <v-row>
           <v-spacer></v-spacer>
           <v-col cols="auto">
-            <v-card flat class="mx-auto transparent" width="200" href="https://www.launchcode.org">
+            <v-card
+              dark="true"
+              flat
+              class="mx-auto transparent"
+              width="200"
+              href="https://www.launchcode.org"
+            >
               <v-img
                 contain
                 class="align-end"
                 height="50px"
-                src="https://www.launchcode.org/assets/dabomb-2080d6e23ef41463553f203daaa15991fd4c812676d0b098243b4941fcf4b57f.svg"
+                src="http://localhost:8080/storage/uploads/2020/01/08/5e163b39bfe9flaunchcode.png"
               ></v-img>
             </v-card>
           </v-col>
           <v-col cols="auto">
-            <v-card flat class="mx-auto transparent" width="200" href="https://www.p2pu.org">
+            <v-card
+              dark="true"
+              flat
+              class="mx-auto transparent"
+              width="200"
+              href="https://www.p2pu.org"
+            >
               <v-sheet class="px-2 transparent">
                 <v-img
                   contain
@@ -76,6 +80,7 @@
               class="mx-auto transparent"
               width="200"
               href="https://digitalliteracyassessment.org"
+              dark="true"
             >
               <v-sheet class="px-4 transparent">
                 <v-img
@@ -90,9 +95,9 @@
           <v-spacer></v-spacer>
         </v-row>
         <v-divider></v-divider>
-        <v-card-text class="white--text">
+        <v-card-text>
           {{ new Date().getFullYear() }} &copy;
-          <strong>Tech Access</strong>
+          <strong>Kansas City Public Library</strong>
         </v-card-text>
       </v-card>
     </v-footer>
@@ -106,7 +111,6 @@ export default {
       clipped: false,
       drawer: false,
       fixed: false,
-      initialDark: this.$vuetify ? this.$vuetify.theme.dark : false,
       items: [
         {
           icon: "mdi-home",
@@ -161,11 +165,6 @@ export default {
       rightDrawer: false,
       title: "Tech Access"
     };
-  },
-  beforeDestroy() {
-    if (!this.$vuetify) return;
-
-    this.$vuetify.theme.dark = this.initialDark;
   }
 };
 </script>
