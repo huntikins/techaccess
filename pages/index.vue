@@ -40,50 +40,22 @@
 <script>
 export default {
   async asyncData({ app }) {
-    const volunteer = await app.$axios.post(
-      process.env.FRONTPAGE_VOLUNTEER,
-      JSON.stringify({}),
-      {
-        headers: { "Content-Type": "application/json" }
-      }
-    );
-    const resource = await app.$axios.post(
-      process.env.FRONTPAGE_RESOURCES,
-      JSON.stringify({}),
-      {
-        headers: { "Content-Type": "application/json" }
-      }
-    );
-    const partner = await app.$axios.post(
-      process.env.FRONTPAGE_PARTNER,
-      JSON.stringify({}),
-      {
-        headers: { "Content-Type": "application/json" }
-      }
-    );
-    const heading = await app.$axios.post(
-      process.env.FRONTPAGE_DESCRIPTION,
-      JSON.stringify({}),
-      {
-        headers: { "Content-Type": "application/json" }
-      }
-    );
-    const hero = await app.$axios.post(
-      process.env.FRONTPAGE_HERO,
+    const {data} = await app.$axios.post(
+      process.env.FRONTPAGE,
       JSON.stringify({}),
       {
         headers: { "Content-Type": "application/json" }
       }
     );
     return {
-      volunteerURL: process.env.IMG_URL + volunteer.data.image.path,
-      volunteerText: volunteer.data.content,
-      resourcesURL: process.env.IMG_URL + resource.data.image.path,
-      resourcesText: resource.data.content,
-      partnerURL: process.env.IMG_URL + partner.data.image.path,
-      partnerText: partner.data.content,
-      heading: heading.data.content,
-      hero: process.env.IMG_URL + hero.data.image.path
+      volunteerURL: process.env.IMG_URL + data.volunteer_img.path,
+      volunteerText: data.volunteer_text,
+      resourcesURL: process.env.IMG_URL + data.resources_img.path,
+      resourcesText: data.resources_text,
+      partnerURL: process.env.IMG_URL + data.partner_img.path,
+      partnerText: data.partner_text,
+      heading: data.heading,
+      hero: process.env.IMG_URL + data.hero.path
     };
   }
 };

@@ -1,8 +1,20 @@
 <template>
   <v-app>
-    <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+    <v-navigation-drawer
+      v-model="drawer"
+      :mini-variant="miniVariant"
+      :clipped="clipped"
+      fixed
+      app
+    >
       <v-list>
-        <v-list-item v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+        <v-list-item
+          v-for="(item, i) in items"
+          :key="i"
+          :to="item.to"
+          router
+          exact
+        >
           <v-list-item-action>
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
@@ -39,8 +51,7 @@
           </v-btn>
         </v-card-text>
         <v-row>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
+          <v-col :md="2" :sm="12" :offset-md="3">
             <v-card
               dark="true"
               flat
@@ -56,7 +67,7 @@
               ></v-img>
             </v-card>
           </v-col>
-          <v-col cols="auto">
+          <v-col :md="2" :sm="12">
             <v-card
               dark="true"
               flat
@@ -74,7 +85,7 @@
               </v-sheet>
             </v-card>
           </v-col>
-          <v-col cols="auto">
+          <v-col :md="2" :sm="12">
             <v-card
               flat
               class="mx-auto transparent"
@@ -92,7 +103,6 @@
               </v-sheet>
             </v-card>
           </v-col>
-          <v-spacer></v-spacer>
         </v-row>
         <v-divider></v-divider>
         <v-card-text>
@@ -123,14 +133,14 @@ export default {
           to: "/about"
         },
         {
-          icon: "mdi-calendar-heart",
-          title: "Events",
-          to: "/events"
-        },
-        {
           icon: "mdi-thought-bubble",
           title: "Resources",
           to: "/resources"
+        },
+        {
+          icon: "mdi-school",
+          title: "Learn",
+          to: "/learn"
         },
         {
           icon: "mdi-charity",
@@ -146,11 +156,6 @@ export default {
           icon: "mdi-post",
           title: "Blog",
           to: "/blog"
-        },
-        {
-          icon: "mdi-email",
-          title: "Contact",
-          to: "/contact"
         }
       ],
       icons: [

@@ -3,100 +3,7 @@
     <v-form ref="form">
       <v-container>
         <v-row>
-          <v-col :md="6" :sm="12">
-            <v-row>
-              <v-card class="transparent" flat>
-                <v-col cols="12">
-                  <v-card-title
-                    v-html="heading"
-                    class="d-block text-center white--text display-1 mb-0 pb-0"
-                  >
-                  </v-card-title>
-                </v-col>
-                <v-col :md="6" :offset-md="3" :sm="12" class="mt-0 pt-0">
-                  <v-img :src="hero" contain class="mx-auto" />
-                </v-col>
-                <v-row class="pa-4">
-                  <v-col :md="4" :sm="6">
-                    <v-card hover v-ripple class="py-4">
-                      <v-list-item>
-                        <v-list-item-content>
-                          <v-list-item-title
-                            class="headline text-center"
-                            v-html="benefit_1.heading"
-                          ></v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-
-                      <v-img
-                        :src="benefit_1.img"
-                        contain
-                        width="100%"
-                        class="px-4 "
-                      ></v-img>
-
-                      <v-card-text
-                        v-html="benefit_1.text"
-                        class="text-center caption"
-                      >
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                  <v-col :md="4" :sm="6">
-                    <v-card hover v-ripple class="py-4">
-                      <v-list-item>
-                        <v-list-item-content>
-                          <v-list-item-title
-                            class="headline text-center"
-                            v-html="benefit_2.heading"
-                          ></v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-
-                      <v-img
-                        :src="benefit_2.img"
-                        contain
-                        width="100%"
-                        class="px-4 "
-                      ></v-img>
-
-                      <v-card-text
-                        v-html="benefit_2.text"
-                        class="text-center caption"
-                      >
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                  <v-col :md="4" :sm="6">
-                    <v-card hover v-ripple class="py-4">
-                      <v-list-item>
-                        <v-list-item-content>
-                          <v-list-item-title
-                            class="headline text-center"
-                            v-html="benefit_3.heading"
-                          ></v-list-item-title>
-                        </v-list-item-content>
-                      </v-list-item>
-
-                      <v-img
-                        :src="benefit_3.img"
-                        contain
-                        width="100%"
-                        class="px-4 "
-                      ></v-img>
-
-                      <v-card-text
-                        v-html="benefit_3.text"
-                        class="text-center caption"
-                      >
-                      </v-card-text>
-                    </v-card>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-row>
-          </v-col>
-          <v-col :md="6" :sm="12">
+          <v-col :md="12" :sm="12">
             <v-alert
               v-model="alert"
               prominent
@@ -248,24 +155,6 @@ export default {
     );
 
     return {
-      hero: process.env.IMG_URL + data.hero.path,
-      heading: data.heading,
-      subheading: data.subheading,
-      benefit_1: {
-        heading: data.benefit_1_heading,
-        img: process.env.IMG_URL + data.benefit_1_img.path,
-        text: data.benefit_1_text
-      },
-      benefit_2: {
-        heading: data.benefit_2_heading,
-        img: process.env.IMG_URL + data.benefit_2_img.path,
-        text: data.benefit_2_text
-      },
-      benefit_3: {
-        heading: data.benefit_3_heading,
-        img: process.env.IMG_URL + data.benefit_3_img.path,
-        text: data.benefit_3_text
-      },
       alert_message: data.email_confirmation_message,
       form_header: data.form_heading
     };
@@ -274,7 +163,7 @@ export default {
     validate() {
       this.alert = false;
       if (this.$refs.form.validate()) {
-        fetch(process.env.TECHRESOURCE_FORM, {
+        fetch(process.env.APPOINTMENT_FORM, {
           method: "post",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
