@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <h1 class="mb-6">Posts tagged with "{{ category }}"</h1>
     <v-row>
       <v-col :md="3" sm="6" v-for="(post, key) in posts" :key="key">
         <v-card :loading="loading" class="mx-auto my-12" max-width="374" hover>
@@ -31,35 +32,34 @@
     </v-row>
   </v-container>
 </template>
-
 <script>
 export default {
-  data: () => ({
-    loading: false,
-    selection: 1
-  }),
+  async asyncData({ app, params, error, payload }) {
+    if (payload) {
+      return { posts: payload, category: params.tag };
+    } else {
+      let { data } = await app.$axios.post(
+        process.env.POSTS_URL,
+        JSON.stringify({
+          filter: { published: true, tags: { $has: params.tag } },
+          sort: { _created: -1 },
+          populate: 1
+        }),
+        {
+          headers: { "Content-Type": "application/json" }
+        }
+      );
 
-  methods: {
-    reserve() {
-      this.loading = true;
-
-      setTimeout(() => (this.loading = false), 2000);
-    }
-  },
-  async asyncData({ app }) {
-    const { data } = await app.$axios.post(
-      process.env.POSTS_URL,
-      JSON.stringify({
-        filter: { published: true },
-        sort: { _created: -1 },
-        populate: 1
-      }),
-      {
-        headers: { "Content-Type": "application/json" }
+      if (!data.entries[0]) {
+        return error({ message: "404 Page not found", statusCode: 404 });
       }
-    );
 
-    return { posts: data.entries, img_url: process.env.IMG_URL };
+      return {
+        posts: data.entries,
+        category: params.tag,
+        img_url: process.env.IMG_URL
+      };
+    }
   }
 };
 </script>

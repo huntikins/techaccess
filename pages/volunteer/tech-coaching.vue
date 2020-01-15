@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-alert
-      v-model="alert"
+      v-model="showAlert"
       prominent
       color="green"
       border="right"
@@ -11,7 +11,7 @@
       dark="true"
       class="white--text"
     >
-      New applications will be taken at the beginning of 2020.
+      {{ alertText }}
     </v-alert>
     <h1 class="text-center">Become a Tech Coach</h1>
     <v-row>
@@ -51,7 +51,7 @@
         <h1 class="text-center" v-html="locationHeading"></h1>
         <v-row>
           <template v-for="location in locations">
-            <v-col :md="3" :sm="6">
+            <v-col :md="3" :sm="6" :key="location.name">
               <v-card hover :href="location.url" v-ripple :key="name">
                 <v-card-title
                   class="justify-center text-center"
@@ -114,7 +114,9 @@ export default {
       benefits: page.data.benefits,
       heading: page.data.heading,
       hero: process.env.IMG_URL + page.data.hero.path,
-      locations: location.data.entries
+      locations: location.data.entries,
+      showAlert: page.data.alert_enable,
+      alertText: page.data.alert_message
     };
   }
 };

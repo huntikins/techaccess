@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-alert
-      v-model="alert"
+      v-model="showAlert"
       prominent
       color="green"
       border="right"
@@ -11,7 +11,7 @@
       dark="true"
       class="white--text"
     >
-      New applications will be taken at the beginning of 2020.
+      {{ alertText }}
     </v-alert>
     <v-row column justify-center align-center>
       <v-col
@@ -88,9 +88,7 @@
 </template>
 <script>
 export default {
-  data: () => ({
-    alert: true
-  }),
+  data: () => ({}),
   async asyncData({ app }) {
     const { data } = await app.$axios.post(
       process.env.VOLUNTEERPAGE,
@@ -107,7 +105,9 @@ export default {
       codeImg: process.env.IMG_URL + data.code_img.path,
       codeText: data.code_text,
       heading: data.heading,
-      hero: process.env.IMG_URL + data.hero.path
+      hero: process.env.IMG_URL + data.hero.path,
+      showAlert: data.alert_enable,
+      alertText: data.alert_message
     };
   }
 };

@@ -40,7 +40,7 @@
       <h1 class="text-center">Video Resources</h1>
       <v-row>
         <template v-for="video in videos">
-          <v-col :md="3" :sm="12" class="col-12">
+          <v-col :md="3" :sm="12" class="col-12" :key="video.url">
             <v-card hover height="300">
               <iframe
                 width="100%"

@@ -85,12 +85,37 @@ export default {
           headers: { "Content-Type": "application/json" }
         }
       );
-      return data.entries.map(post => {
-        return {
-          route: post.title_slug,
-          payload: post
-        };
-      });
+
+      const collection = collect(data.entries);
+
+      let tags = collection
+        .map(post => post.tags)
+        .flatten()
+        .unique()
+        .map(tag => {
+          let payload = collection
+            .filter(item => {
+              return collect(item.tags).contains(tag);
+            })
+            .all();
+
+          return {
+            route: `category/${tag}`,
+            payload: payload
+          };
+        })
+        .all();
+
+      let posts = collection
+        .map(post => {
+          return {
+            route: post.title_slug,
+            payload: post
+          };
+        })
+        .all();
+
+      return posts.concat(tags);
     }
   },
   /*

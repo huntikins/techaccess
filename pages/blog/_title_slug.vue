@@ -1,21 +1,25 @@
 <template>
-  <section>
-    <article class="my-8">
-      <div class="text-gray-600 font-bold text-sm tracking-wide">
-        <a
-          v-for="(tag, key) in post.tags"
-          :key="key"
-          :href="'/category/'+tag"
-          class="ml-1"
-        >{{ tag }}</a>
-      </div>
-      <h1 class="mt-2 text-3xl font-bold">{{ post.title }}</h1>
-      <div
-        class="mt-4 markdown"
-        v-html="$options.filters.parseMd(post.excerpt + '\n' + post.content)"
-      ></div>
-    </article>
-  </section>
+  <v-container>
+    <div class="text-gray-600 font-bold text-sm tracking-wide">
+      <v-chip
+        v-for="(tag, key) in post.tags"
+        :key="key"
+        :href="'/category/' + tag"
+        class="ml-1"
+        color="secondary"
+        >{{ tag }}</v-chip
+      >
+    </div>
+    <h1 class="mt-2 display-2">{{ post.title }}</h1>
+    <v-subheader class="ml-0 pl-0"
+      >{{ post.date }} - By: {{ post.author }}</v-subheader
+    >
+    <v-divider></v-divider>
+    <div
+      class="mt-4 markdown"
+      v-html="$options.filters.parseMd(post.excerpt + '\n' + post.content)"
+    ></div>
+  </v-container>
 </template>
 <script>
 export default {
