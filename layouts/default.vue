@@ -38,9 +38,9 @@
       <v-spacer />
       <v-card class="transparent pa-4 text--center" flat ripple to="/">
         <v-img
-          src="http://localhost:8080/storage/uploads/2020/01/08/5e163ed73da54navlogo.png"
+          src="http://localhost:8080/storage/uploads/2020/01/16/5e208b1d27140techaccessgreen.png"
           contain
-          width="50%"
+          width="30%"
           class="mx-auto"
         />
       </v-card>
