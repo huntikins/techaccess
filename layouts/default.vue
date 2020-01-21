@@ -138,32 +138,32 @@ export default {
         {
           icon: "mdi-book-information-variant",
           title: "About",
-          to: "/about"
+          to: "/about/"
         },
         {
           icon: "mdi-thought-bubble",
           title: "Resources",
-          to: "/resources"
+          to: "/resources/"
         },
         {
           icon: "mdi-school",
           title: "Learn",
-          to: "/learn"
+          to: "/learn/"
         },
         {
           icon: "mdi-charity",
           title: "Volunteer",
-          to: "/volunteer"
+          to: "/volunteer/"
         },
         {
           icon: "mdi-hand-heart",
           title: "Partner",
-          to: "/partner"
+          to: "/partner/"
         },
         {
           icon: "mdi-post",
           title: "Blog",
-          to: "/blog"
+          to: "/blog/"
         }
       ],
       icons: [
