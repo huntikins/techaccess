@@ -5,7 +5,7 @@ import axios from "axios";
 const collect = require("collect.js");
 
 export default {
-  mode: "spa",
+  mode: "universal",
   /*
    ** Headers of the page
    */
