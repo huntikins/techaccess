@@ -1,7 +1,8 @@
 require("dotenv").config();
 import colors from "vuetify/es5/util/colors";
 const path = require("path");
-import axios from "axios"; // we'll need this later for our dynamic route
+import axios from "axios";
+const collect = require("collect.js");
 
 export default {
   mode: "universal",

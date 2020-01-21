@@ -1,6 +1,9 @@
 <template>
   <div class="iframe-container">
-    <iframe src="http://localhost:8080/auth/login" allowfullscreen></iframe>
+    <iframe
+      src="http://techaccess.westus.azurecontainer.io/auth/login"
+      allowfullscreen
+    ></iframe>
   </div>
 </template>
 <script>
@@ -21,11 +24,11 @@ export default {
 
 .iframe-container iframe {
   border: 0;
-  height: 100%;
+  height: 100vh;
   left: 0;
   position: absolute;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 /* 4x3 Aspect Ratio */
