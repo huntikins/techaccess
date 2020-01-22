@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div class="pa-5">
     <v-alert
       v-model="showAlert"
       prominent
@@ -84,7 +84,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 
 <script>

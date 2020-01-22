@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div class="pa-5">
     <div class="text-gray-600 font-bold text-sm tracking-wide">
       <v-chip
         v-for="(tag, key) in post.tags"
@@ -19,7 +19,7 @@
       class="mt-4 markdown"
       v-html="$options.filters.parseMd(post.excerpt + '\n' + post.content)"
     ></div>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {

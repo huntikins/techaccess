@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pa-5">
     <v-form ref="form">
       <v-container>
         <v-row class="px-md-10 mx-md-10">

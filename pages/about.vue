@@ -1,5 +1,5 @@
 <template>
-  <v-layout column justify-center align-center>
+  <v-layout column justify-center align-center class="pa-5">
     <v-flex xs12 sm8 md6>
       <v-row class="px-4">
         <v-col :md="4" :offset-md="4" :sm="12">

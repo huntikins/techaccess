@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pa-5">
     <v-form ref="form">
       <v-container>
         <v-alert

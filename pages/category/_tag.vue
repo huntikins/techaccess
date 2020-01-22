@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div class="pa-5">
     <h1 class="mb-6">Posts tagged with "{{ category }}"</h1>
     <v-row>
       <v-col :md="3" sm="6" v-for="(post, key) in posts" :key="key">
@@ -30,7 +30,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {

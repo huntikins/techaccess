@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div class="pa-5">
     <v-alert
       v-model="alert"
       prominent
@@ -64,7 +64,7 @@
         </v-row>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {

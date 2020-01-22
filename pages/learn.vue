@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div class="pa-5">
     <v-row>
       <v-col :md="2" :sm-="12" :offset-md="1">
         <v-card class="mx-auto" max-width="344" to="/appointment" hover>
@@ -55,7 +55,7 @@
         </template>
       </v-row>
     </v-card>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {

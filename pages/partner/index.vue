@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <div class="pa-5">
     <v-row>
       <v-col :md="8" :offset-md="2" :sm="12">
         <h1
@@ -83,7 +83,7 @@
         </v-btn>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
 <script>
 export default {

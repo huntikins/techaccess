@@ -36,7 +36,12 @@
     <v-app-bar :clipped-left="clipped" fixed app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-spacer />
-      <v-card class="transparent pa-4 text--center" flat ripple to="/">
+      <v-card
+        class="transparent pa-4 text--center navbar_brand"
+        flat
+        :ripple="false"
+        to="/"
+      >
         <v-img
           src="http://localhost:8080/storage/uploads/2020/01/16/5e208b1d27140techaccessgreen.png"
           contain
@@ -47,9 +52,7 @@
       <v-spacer />
     </v-app-bar>
     <v-content>
-      <v-container>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
     <v-footer padless inset absolute app dark="true">
       <v-card flat tile dark="true" class="text-center" width="100vw">
@@ -181,3 +184,12 @@ export default {
   }
 };
 </script>
+<style lang="css">
+.v-card__title {
+  word-break: normal !important;
+}
+.navbar_brand:before {
+  content: "";
+  background: none !important;
+}
+</style>
