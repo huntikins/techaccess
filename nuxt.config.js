@@ -45,6 +45,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    "@nuxtjs/proxy",
     ["@nuxtjs/dotenv", { systemvars: true }]
   ],
   /*
@@ -56,6 +57,12 @@ export default {
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
+
+  proxy: {
+    // Simple proxy
+    "/api/": "http://techaccess.westus.azurecontainer.io",
+    "/storage/": "http://techaccess.westus.azurecontainer.io"
+  },
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
