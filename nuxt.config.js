@@ -5,7 +5,7 @@ import axios from "axios";
 const collect = require("collect.js");
 
 export default {
-  mode: "spa",
+  mode: "universal",
   /*
    ** Headers of the page
    */
@@ -45,16 +45,14 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    "@nuxtjs/proxy",
     ["@nuxtjs/dotenv", { systemvars: true }]
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {
-    proxy: true,
-    retry: { retries: 3 }
-  },
+  axios: {},
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
