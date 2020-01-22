@@ -65,14 +65,14 @@ export default {
       process.env.LEARNING,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
     const embed = await app.$axios.post(
       process.env.VIDEOS,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
     console.log(embed);

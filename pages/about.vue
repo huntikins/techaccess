@@ -44,7 +44,7 @@ export default {
       process.env.ABOUTPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
 

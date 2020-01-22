@@ -102,7 +102,7 @@ export default {
       process.env.PARTNERPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
     return {

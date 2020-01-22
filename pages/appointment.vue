@@ -358,7 +358,7 @@ export default {
       process.env.RESOURCEPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
 
@@ -372,7 +372,7 @@ export default {
       if (this.$refs.form.validate()) {
         fetch(process.env.APPOINTMENT_FORM, {
           method: "post",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: JSON.stringify({
             form: {
               "First Name": this.firstname,

@@ -94,7 +94,7 @@ export default {
       process.env.VOLUNTEERPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
     return {

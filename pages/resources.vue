@@ -243,7 +243,7 @@ export default {
       process.env.RESOURCEPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/x-www-form-urlencoded" }
       }
     );
 
