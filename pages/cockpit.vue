@@ -1,7 +1,7 @@
 <template>
   <div class="iframe-container">
     <iframe
-      src="http://techaccess.westus.azurecontainer.io/auth/login"
+      src="https://cms-techaccess.azurewebsites.net/auth/login"
       allowfullscreen
     ></iframe>
   </div>
