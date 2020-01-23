@@ -1,7 +1,7 @@
 <template>
   <div class="pa-5">
     <v-form ref="form">
-      <v-container>
+      <div class="pa-5">
         <v-row class="px-md-10 mx-md-10">
           <v-col :md="12" :sm="12">
             <v-alert
@@ -313,7 +313,7 @@
             </v-card>
           </v-col>
         </v-row>
-      </v-container>
+      </div>
     </v-form>
   </div>
 </template>
@@ -358,7 +358,7 @@ export default {
       process.env.RESOURCEPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
 
@@ -372,7 +372,7 @@ export default {
       if (this.$refs.form.validate()) {
         fetch(process.env.APPOINTMENT_FORM, {
           method: "post",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             form: {
               "First Name": this.firstname,

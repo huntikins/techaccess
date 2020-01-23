@@ -94,14 +94,14 @@ export default {
       process.env.TECHCOACH,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
     const location = await app.$axios.post(
       process.env.LOCATIONS,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
     return {

@@ -94,10 +94,7 @@ export default {
       process.env.FRONTPAGE,
       JSON.stringify({}),
       {
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          crossdomain: true
-        }
+        headers: { "Content-Type": "application/json" }
       }
     );
     return {

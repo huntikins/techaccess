@@ -46,7 +46,7 @@ export default {
           populate: 1
         }),
         {
-          headers: { "Content-Type": "application/x-www-form-urlencoded" }
+          headers: { "Content-Type": "application/json" }
         }
       );
 

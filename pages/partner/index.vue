@@ -11,7 +11,7 @@
       <v-col :md="12" :sm="12">
         <!-- Begin Mailchimp Signup Form -->
         <link
-          href="https://cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
+          href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css"
           rel="stylesheet"
           type="text/css"
         />
@@ -102,7 +102,7 @@ export default {
       process.env.PARTNERPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
     return {

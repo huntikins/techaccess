@@ -56,7 +56,6 @@ export default {
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module
    */
-
   vuetify: {
     customVariables: ["~/assets/variables.scss"],
     theme: {
@@ -111,7 +110,7 @@ export default {
       let posts = collection
         .map(post => {
           return {
-            route: `blog/${post.title_slug}`,
+            route: post.title_slug,
             payload: post
           };
         })

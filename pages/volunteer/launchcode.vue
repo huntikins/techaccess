@@ -76,7 +76,7 @@ export default {
       process.env.LAUNCHCODE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
     return {

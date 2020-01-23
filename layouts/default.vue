@@ -12,7 +12,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
-          nuxt
+          router
           exact
         >
           <v-list-item-action>
@@ -52,7 +52,9 @@
       <v-spacer />
     </v-app-bar>
     <v-content>
-      <nuxt />
+      <div class="pa-5">
+        <nuxt />
+      </div>
     </v-content>
     <v-footer padless inset absolute app dark="true">
       <v-card flat tile dark="true" class="text-center" width="100vw">
@@ -141,32 +143,32 @@ export default {
         {
           icon: "mdi-book-information-variant",
           title: "About",
-          to: "/about/"
+          to: "/about"
         },
         {
           icon: "mdi-thought-bubble",
           title: "Resources",
-          to: "/resources/"
+          to: "/resources"
         },
         {
           icon: "mdi-school",
           title: "Learn",
-          to: "/learn/"
+          to: "/learn"
         },
         {
           icon: "mdi-charity",
           title: "Volunteer",
-          to: "/volunteer/"
+          to: "/volunteer"
         },
         {
           icon: "mdi-hand-heart",
           title: "Partner",
-          to: "/partner/"
+          to: "/partner"
         },
         {
           icon: "mdi-post",
           title: "Blog",
-          to: "/blog/"
+          to: "/blog"
         }
       ],
       icons: [

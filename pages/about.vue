@@ -1,5 +1,5 @@
 <template>
-  <v-layout column justify-center align-center class="pa-5">
+  <v-layout column justify-center align-center>
     <v-flex xs12 sm8 md6>
       <v-row class="px-4">
         <v-col :md="4" :offset-md="4" :sm="12">
@@ -44,7 +44,7 @@ export default {
       process.env.ABOUTPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
 

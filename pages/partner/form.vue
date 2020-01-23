@@ -1,7 +1,7 @@
 <template>
-  <div class="pa-5">
+  <div>
     <v-form ref="form">
-      <v-container>
+      <div class="pa-5">
         <v-alert
           v-model="alert"
           prominent
@@ -85,7 +85,7 @@
             </v-card>
           </v-col>
         </v-row>
-      </v-container>
+      </div>
     </v-form>
   </div>
 </template>
@@ -108,7 +108,7 @@ export default {
       process.env.RESOURCEPAGE,
       JSON.stringify({}),
       {
-        headers: { "Content-Type": "application/x-www-form-urlencoded" }
+        headers: { "Content-Type": "application/json" }
       }
     );
 
@@ -122,7 +122,7 @@ export default {
       if (this.$refs.form.validate()) {
         fetch(process.env.PARTNER_FORM, {
           method: "post",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             form: {
               Name: this.firstname,
