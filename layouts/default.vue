@@ -12,7 +12,7 @@
           v-for="(item, i) in items"
           :key="i"
           :to="item.to"
-          nuxt
+          nuxt="true"
           exact
         >
           <v-list-item-action>
