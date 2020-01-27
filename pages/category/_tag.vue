@@ -58,8 +58,7 @@ export default {
 
       return {
         posts: data.entries,
-        category: params.tag,
-        img_url: process.env.IMG_URL
+        category: params.tag
       };
     }
   }
