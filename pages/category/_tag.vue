@@ -16,7 +16,9 @@
           </v-list-item>
 
           <v-img
-            :src="img_url + post.image.path"
+            :src="
+              'https://cms.kclibrary.org/storage/uploads/' + post.image.path
+            "
             height="194"
             :to="'/blog/' + post.title_slug"
           ></v-img>
