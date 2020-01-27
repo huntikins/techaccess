@@ -1,9 +1,6 @@
 <template>
   <div class="iframe-container">
-    <iframe
-      src="https://cms-techaccess.azurewebsites.net/auth/login"
-      allowfullscreen
-    ></iframe>
+    <iframe src="https://cms.kclibrary.org/auth/login" allowfullscreen></iframe>
   </div>
 </template>
 <script>

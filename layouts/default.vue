@@ -44,7 +44,7 @@
         to="/"
       >
         <v-img
-          src="https://cms-techaccess.azurewebsites.net/storage/uploads/2020/01/16/5e208b1d27140techaccessgreen.png"
+          src="https://cms.kclibrary.org/storage/uploads/2020/01/16/5e208b1d27140techaccessgreen.png"
           contain
           width="30%"
           class="mx-auto"
@@ -77,7 +77,7 @@
                 contain
                 class="align-end"
                 height="50px"
-                src="https://cms-techaccess.azurewebsites.net/storage/uploads/2020/01/08/5e163b39bfe9flaunchcode.png"
+                src="https://cms.kclibrary.org/storage/uploads/2020/01/08/5e163b39bfe9flaunchcode.png"
               ></v-img>
             </v-card>
           </v-col>
