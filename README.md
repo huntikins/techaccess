@@ -5,7 +5,7 @@
 
 > New website for the Tech Access team ran by the Kansas City Public Library
 
-Website is built using NUXT.js to SSR the Vue.js app. Vuetify.js is used for component styling and Cockpit CMS is used for the back end. CMS is running on a seperate server, the nuxt application hits api endpoints configured with content types in Cockpit CMS to provide updates to content on the website. 
+Website is built using NUXT.js to SSR the Vue.js app. Vuetify.js is used for component styling and Cockpit CMS is used for the back end. CMS is running on a seperate server, the nuxt application hits api endpoints configured with content types in Cockpit CMS to provide updates to the website. 
 
 [Cockpit CMS](https://github.com/agentejo/cockpit)
 
