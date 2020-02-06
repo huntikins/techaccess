@@ -22,7 +22,7 @@
         <v-card
           class="mx-auto mt-5"
           max-width="344"
-          href="https://www.kclibrary.org/clubs-activities?keys=tech&field_location_target_id=All&term_node_tid_depth_2=3523&page=1"
+          href="https://www.projectoutcome.org/responses/18137"
           hover
         >
           <v-img
