@@ -19,6 +19,17 @@
             contain
           ></v-img>
         </v-card>
+        <v-card
+          class="mx-auto mt-5"
+          max-width="344"
+          href="https://www.kclibrary.org/clubs-activities?keys=tech&field_location_target_id=All&term_node_tid_depth_2=3523&page=1"
+          hover
+        >
+          <v-img
+            src="https://cms.kclibrary.org/storage/uploads/2020/01/29/5e3204aeb8510TechCoachFeedback.png"
+            contain
+          ></v-img>
+        </v-card>
       </v-col>
       <template v-for="resource in resources">
         <v-col :md="2" :sm="12" :key="resource._id">
