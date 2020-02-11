@@ -1,5 +1,5 @@
 
-[![Visit site](https://cms.kclibrary.org/storage/uploads/2020/01/16/5e208b1d27140techaccessgreen.png)](https://techaccess.netlify.com)
+[![Visit site](https://cms.kclibrary.org/storage/uploads/2020/01/16/5e208b1d27140techaccessgreen.png)](https://techaccess.kclibrary.org)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/604a49c6-e4dc-467e-8498-5f44822d606b/deploy-status)](https://app.netlify.com/sites/techaccess/deploys)
 
