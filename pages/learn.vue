@@ -1,7 +1,7 @@
 <template>
   <div class="pa-5">
     <v-row>
-      <v-col :md="2" :sm-="12" :offset-md="1">
+      <v-col :md="2" :sm-="12">
         <v-card class="mx-auto" max-width="344" to="/appointment" hover>
           <v-img
             src="https://www.kclibrary.org/sites/default/files/Appointment800x414.png"
