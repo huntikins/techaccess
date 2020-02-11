@@ -82,7 +82,7 @@
           href="https://www.volgistics.com/ex/portal.dll/ap?ap=1433095633"
           >Apply Now</v-btn
         >
-        <p>
+        <p class="text-center pt-2">
           Already a volunteer?<a
             href="https://www.volgistics.com/ex2/vicnet.dll?from=289919"
           >
