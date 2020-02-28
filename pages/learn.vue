@@ -4,7 +4,7 @@
       <v-col :md="2" :sm-="12">
         <v-card class="mx-auto" max-width="344" to="/appointment" hover>
           <v-img
-            src="https://www.kclibrary.org/sites/default/files/Appointment800x414.png"
+            src="https://cms.kclibrary.org/storage/uploads/2020/02/12/5e44696768dfe3.png"
             contain
           ></v-img>
         </v-card>
@@ -15,7 +15,7 @@
           hover
         >
           <v-img
-            src="https://www.kclibrary.org/sites/default/files/FindTechCoach800x414.png"
+            src="https://cms.kclibrary.org/storage/uploads/2020/02/12/5e446967b9be64.png"
             contain
           ></v-img>
         </v-card>
