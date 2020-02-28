@@ -35,7 +35,22 @@
             </v-col>
           </v-row>
           <v-row class="px-4">
-            <v-col :md="4" :sm="12">
+            <v-col :md="3" :sm="12">
+              <v-card
+                class="mx-auto"
+                v-ripple
+                nuxt="true"
+                to="/learn"
+                hover="true"
+              >
+                <v-img :src="learnURL" contain alt="Learn"></v-img>
+                <v-card-subtitle
+                  class="text-center white--text"
+                  v-html="learnText"
+                ></v-card-subtitle>
+              </v-card>
+            </v-col>
+            <v-col :md="3" :sm="12">
               <v-card
                 class="mx-auto"
                 v-ripple
@@ -50,22 +65,7 @@
                 ></v-card-subtitle>
               </v-card>
             </v-col>
-            <v-col :md="4" :sm="12">
-              <v-card
-                class="mx-auto"
-                v-ripple
-                nuxt="true"
-                to="/volunteer"
-                hover="true"
-              >
-                <v-img :src="volunteerURL" contain alt="Volunteer"></v-img>
-                <v-card-subtitle
-                  class="text-center white--text"
-                  v-html="volunteerText"
-                ></v-card-subtitle>
-              </v-card>
-            </v-col>
-            <v-col :md="4" :sm="12">
+            <v-col :md="3" :sm="12">
               <v-card
                 class="mx-auto"
                 v-ripple
@@ -77,6 +77,21 @@
                 <v-card-subtitle
                   class="text-center white--text"
                   v-html="partnerText"
+                ></v-card-subtitle>
+              </v-card>
+            </v-col>
+            <v-col :md="3" :sm="12">
+              <v-card
+                class="mx-auto"
+                v-ripple
+                nuxt="true"
+                to="/volunteer"
+                hover="true"
+              >
+                <v-img :src="volunteerURL" contain alt="Volunteer"></v-img>
+                <v-card-subtitle
+                  class="text-center white--text"
+                  v-html="volunteerText"
                 ></v-card-subtitle>
               </v-card>
             </v-col>
@@ -100,6 +115,8 @@ export default {
     return {
       volunteerURL: process.env.IMG_URL + data.volunteer_img.path,
       volunteerText: data.volunteer_text,
+      learnURL: process.env.IMG_URL + data.learn_img.path,
+      learnText: data.learn_text,
       resourcesURL: process.env.IMG_URL + data.resources_img.path,
       resourcesText: data.resources_text,
       partnerURL: process.env.IMG_URL + data.partner_img.path,
