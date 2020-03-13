@@ -117,6 +117,24 @@
               </v-sheet>
             </v-card>
           </v-col>
+          <v-col :md="2" :sm="12">
+            <v-card
+              flat
+              class="mx-auto transparent"
+              width="200"
+              href="https://agilities.org/awp"
+              dark="true"
+            >
+              <v-sheet class="px-4 transparent">
+                <v-img
+                  contain
+                  class="align-end"
+                  height="50px"
+                  src="https://cms.kclibrary.org/storage/uploads/2020/03/13/5e6bab68172aeDeBruce_Horizontal_Logo_White.png"
+                ></v-img>
+              </v-sheet>
+            </v-card>
+          </v-col>
         </v-row>
         <v-divider></v-divider>
         <v-card-text>
