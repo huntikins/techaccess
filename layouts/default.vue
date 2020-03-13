@@ -65,7 +65,7 @@
           </v-btn>
         </v-card-text>
         <v-row>
-          <v-col :md="2" :sm="12" :offset-md="3">
+          <v-col :md="2" :sm="12" :offset-md="2">
             <v-card
               dark="true"
               flat
