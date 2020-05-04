@@ -2,14 +2,16 @@
   <div class="pa-5">
     <v-row>
       <v-card class="pa-4 mt-4" flat>
-        <v-col :md="12" :sm-="12">
-          <h1 class="text-center">Create Your Own Path</h1>
+        <h1 class="text-center">Create Your Own Path</h1>
+        <v-col :md="4" :sm="12">
           <v-card class="mx-auto" max-width="344" to="/appointment" hover>
             <v-img
               src="https://cms.kclibrary.org/storage/uploads/2020/02/12/5e44696768dfe3.png"
               contain
             ></v-img>
           </v-card>
+        </v-col>
+        <v-col :md="4" :sm="12">
           <v-card
             class="mx-auto mt-5"
             max-width="344"
@@ -21,6 +23,8 @@
               contain
             ></v-img>
           </v-card>
+        </v-col>
+        <v-col :md="4" :sm="12">
           <v-card
             class="mx-auto mt-5"
             max-width="344"
