@@ -52,8 +52,8 @@ export default {
     data.block_icon.forEach(function(element) {
       iconBlocks.push({
         id: element._id,
-        icon: process.env.IMG_URL + element.display.path,
-        text: data.block_text.find(e => e._id === element._id).display
+        text: data.block_text.find(e => e._id === element._id).display,
+        icon: process.env.IMG_URL + element.display.path
       });
     });
 
