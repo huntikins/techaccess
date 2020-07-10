@@ -71,7 +71,7 @@
               flat
               class="mx-auto transparent"
               width="200"
-              href="https://www.launchcode.org"
+              href="https://www.launchcode.org/discovery"
             >
               <v-img
                 contain
@@ -104,7 +104,7 @@
               flat
               class="mx-auto transparent"
               width="200"
-              href="https://digitalliteracyassessment.org"
+              href="https://www.digitalliteracyassessment.org/launch-from/7655-4BH8-kansas-city-public-library"
               dark="true"
             >
               <v-sheet class="px-4 transparent">
