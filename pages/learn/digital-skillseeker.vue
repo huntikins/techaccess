@@ -54,7 +54,7 @@ export default {
         id: element._id,
         text: data.block_text.find(e => e._id === element._id).display,
         icon: process.env.IMG_URL + element.display.path,
-        url: element.block_url.display
+        url: data.block_url.find(e => e._id === element._id).display
       });
     });
 
