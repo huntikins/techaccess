@@ -43,6 +43,7 @@
                   contain
                 ></v-img>
               </v-card>
+            </v-col>
             <v-col :md="3" :sm="12">
               <v-card
                 class="mx-auto mt-5"
