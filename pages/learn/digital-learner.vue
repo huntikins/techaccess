@@ -18,17 +18,32 @@
         <v-row class="pa-4">
           <template v-for="value in iconblock">
             <v-col :md="3" :sm="6" :key="value.id">
-              <v-card hover v-ripple class="pa-4" :href="value.url">
-                <v-img
-                  width="50%"
-                  contain
-                  :src="value.icon"
-                  class="mx-auto mt-4"
-                ></v-img>
-                <v-card-subtitle class="text-center white--text">{{
-                  value.text
-                }}</v-card-subtitle>
-              </v-card>
+              <template v-if="typeof value.url !== 'undefined'">
+                <v-card hover v-ripple class="pa-4" :href="value.url">
+                  <v-img
+                    width="50%"
+                    contain
+                    :src="value.icon"
+                    class="mx-auto mt-4"
+                  ></v-img>
+                  <v-card-subtitle class="text-center white--text">{{
+                    value.text
+                  }}</v-card-subtitle>
+                </v-card>
+              </template>
+              <template v-else>
+                <v-card hover v-ripple class="pa-4">
+                  <v-img
+                    width="50%"
+                    contain
+                    :src="value.icon"
+                    class="mx-auto mt-4"
+                  ></v-img>
+                  <v-card-subtitle class="text-center white--text">{{
+                    value.text
+                  }}</v-card-subtitle>
+                </v-card>
+              </template>
             </v-col>
           </template>
         </v-row>
