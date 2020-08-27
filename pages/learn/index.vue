@@ -74,7 +74,9 @@
                     contain
                   ></v-img>
                   <v-card-title v-html="resource.heading"> </v-card-title>
-                  <v-card-subtitle v-html="resource.text"> </v-card-subtitle>
+                  <template v-if="resource.text">
+                    <v-card-subtitle v-html="resource.text"> </v-card-subtitle>
+                  </template>
                   <v-card-actions>
                     <v-btn color="green" block :href="resource.url">
                       {{ resource.title }}

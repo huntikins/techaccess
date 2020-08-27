@@ -18,7 +18,7 @@
         <v-row class="pa-4">
           <template v-for="value in iconblock">
             <v-col :md="3" :sm="6" :key="value.id">
-              <v-card hover v-ripple class="pa-4">
+              <v-card hover v-ripple class="pa-4" :href="value.url">
                 <v-img
                   width="50%"
                   contain
@@ -53,7 +53,8 @@ export default {
       iconBlocks.push({
         id: element._id,
         text: data.block_text.find(e => e._id === element._id).display,
-        icon: process.env.IMG_URL + element.display.path
+        icon: process.env.IMG_URL + element.display.path,
+        url: data.block_url.find(e => e._id === element._id).display
       });
     });
 
