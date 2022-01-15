@@ -15,7 +15,7 @@
     "@nuxtjs/dotenv": "^1.4.1",
     "collect.js": "^4.19.0",
     "dotenv": "^8.2.0",
-    "marked": "^0.8.0",
+    "marked": "^4.0.10",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
